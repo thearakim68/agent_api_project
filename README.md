@@ -1,78 +1,55 @@
-Here's a professional and human-written `README.md` tailored to your current `agent_api_project` setup, in Kim Theara's personal tone:
+# 🤖 Multi-Agent AI Tools – Assistant Project
+
+This project explores how to build a simple **multi-agent assistant** using external APIs like Google Search, OpenWeatherMap, and a basic calendar scheduler.
+
+It is part of my hands-on learning journey in **Agentic AI**, where I build autonomous tools that can access external information and respond intelligently to tasks.
 
 ---
 
-```markdown
-# 🤖 Multi-Agent API Project – Real-World Tools with Agentic AI
+## 🧩 What It Does
 
-This project showcases how to build AI assistants that **use real-world tools** like Google Search, Weather APIs, and Calendar management.
+The main script `multi_agent.py` uses 3 tools:
 
-It’s a step up from simple prompt-based bots. These agents don’t just answer — they take action by **calling real APIs**, parsing results, and responding with helpful context.
+- `search_tool.py`: Looks up information using web search
+- `weather_tool.py`: Fetches weather data for a city
+- `calendar_tool.py`: Handles event scheduling
 
-> Built with Python, LangChain, and OpenAI GPT — for serious experimentation in Agentic AI.
-
----
-
-## ✨ What It Does
-
-The main script `multi_agent.py` demonstrates:
-- **Search Agent** – fetches live search results from the web
-- **Weather Agent** – pulls live weather for any location via OpenWeatherMap
-- **Calendar Agent** – adds and announces events (mock calendar)
-
-Each agent runs as a separate tool and can be independently expanded.
+These tools simulate how different agents work together to complete tasks. It mimics a basic real-world AI assistant that can retrieve info, organize tasks, and report back to the user.
 
 ---
 
-## 🧱 Project Structure
+## 🛠 How to Run It
 
-```
-
-agent_api_project/
-├── multi_agent.py             # Main script
-├── search_tool.py             # DuckDuckGo or Google Search tool
-├── weather_tool.py            # Weather API tool (OpenWeatherMap)
-├── calendar_tool.py           # Mock calendar tool
-├── .env                       # Store your API keys securely
-├── requirements.txt           # Python dependencies
-└── README.md                  # This file
-
-````
-
----
-
-## 🔑 Environment Setup
-
-1. Clone the repo
+1. **Clone the repository**
 
 ```bash
-git clone git@github.com:thearakim68/agent_api_project.git
+git clone https://github.com/thearakim68/agent_api_project.git
 cd agent_api_project
-````
+```
 
-2. Create & activate virtual environment
+2. **Create and activate virtual environment**
 
 ```bash
 python3 -m venv env
-source env/bin/activate
+source env/bin/activate  # On Windows use `env\Scripts\activate`
 ```
 
-3. Install required packages
+3. **Install requirements**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file with your API keys
+4. **Add your environment variables**  
+Create a `.env` file in the root folder and include your API keys:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
-OPENWEATHER_API_KEY=your_openweather_key_here
+OPENWEATHER_API_KEY=your_openweather_api_key
+GOOGLE_API_KEY=your_google_api_key
+GOOGLE_CSE_ID=your_cse_id
 ```
 
----
-
-## 🚀 How to Run
+5. **Run the assistant**
 
 ```bash
 python multi_agent.py
@@ -83,45 +60,48 @@ python multi_agent.py
 ## 🧪 Sample Output
 
 ```
-Search results: 3 interesting headlines about the Cambodia economy in 2025.
-Weather info: Mostly sunny in Phnom Penh, 33°C. Feels like 36°C.
+Search results: AI in Cambodia is growing with local startups and universities supporting research.
+Weather info: The weather in Phnom Penh is 31°C with scattered clouds.
 Event: Event 'UX Workshop' scheduled for 2025-10-27 10:00 AM.
 ```
 
 ---
 
-## 📦 Tech Stack
+## 🧱 Project Structure
 
-* **Python 3.11+**
-* **LangChain** – Agent orchestration
-* **OpenAI GPT-4**
-* **OpenWeatherMap API**
-* **DuckDuckGo API or Google Search API**
+```
+agent_api_project/
+│
+├── .env                        # API Keys (not tracked by Git)
+├── .gitignore                  # Ignored files/folders
+├── README.md                   # Project overview and setup
+├── requirements.txt            # Python dependencies
+│
+├── multi_agent.py              # Main runner combining all tools
+│
+├── search_tool.py              # Web search functionality
+├── weather_tool.py             # Weather query tool
+├── calendar_tool.py            # Calendar scheduling mock tool
+│
+└── env/                        # Virtual environment (ignored)
+```
 
 ---
 
-## 💡 Ideas for Future Work
+## ⚙️ Tech Stack
 
-* Connect to **real Google Calendar**
-* Add **voice input/output**
-* Expand search to use vector databases (e.g., RAG)
-* Use **Tool Calling API** with OpenAI Functions
+- Python 3.11+
+- OpenAI + Agentic AI pattern
+- OpenWeatherMap API
+- Google Programmable Search API (or DuckDuckGo fallback)
+- Dotenv for environment variable management
 
 ---
 
 ## 🙋 About Me
 
-**Kim Theara**
-UX/UI Designer · Generative AI Researcher · Product Builder
-Passionate about designing the bridge between AI systems and real users.
+**Kim Theara** – UX/UI Designer | AI Builder | Researcher
 
-🔗 [theara-me.webflow.io](https://theara-me.webflow.io/)
-📌 [LinkedIn](https://www.linkedin.com/in/kimtheara-productdesign-ai-expert/)
-📝 [Medium](https://medium.com/@thearakim68)
-
----
-
-> This project is a part of my Agentic AI learning journey.
-> If you're exploring the same path — let’s connect and build together.
-
-```
+- 🌐 [Portfolio](https://theara-me.webflow.io/)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/kimtheara-productdesign-ai-expert/)
+- 🧑‍💻 [Medium](https://medium.com/@thearakim68)

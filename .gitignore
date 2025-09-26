@@ -1,0 +1,35 @@
+# Ignore virtual environments
+venv/
+env/
+agentic_env/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints (optional)
+.ipynb_checkpoints/
+
+# Mac system files
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+
+# VSCode and IDE config files (optional)
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# OS trash folders
+.Trashes
